@@ -1,4 +1,14 @@
-export class GamesAction {
-  public static readonly type = '[Games] Add item';
-  constructor(public payload: string) { }
+enum GamesActionsTypes {
+  GetGamesList = '[Game] Get games list',
+  GetSingleGame = '[Game] Get single game',
+}
+
+export class GetGamesListAction {
+  public static readonly type = GamesActionsTypes.GetGamesList;
+}
+
+export class GetSingleGameAction {
+  public static readonly type = GamesActionsTypes.GetSingleGame;
+
+  constructor(public gameId: string) { }
 }
