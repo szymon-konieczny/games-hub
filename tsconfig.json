@@ -1,13 +1,36 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@env/*": [
+        "environments/*"
+      ],
+      "@core/*": [
+        "app/core/*"
+      ],
+      "@http": [
+        "app/core/http"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ],
+      "@constants": [
+        "app/shared/constants"
+      ],
+      "@interfaces": [
+        "app/shared/interfaces"
+      ],
+      "@store/*": [
+        "store/*"
+      ],
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "es2020",
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
