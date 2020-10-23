@@ -1,3 +1,4 @@
-export const environment = {
-  production: true
+export const AppConfig = {
+  production: true,
+  apiUrl: 'https://staging-frontapi.cherrytech.com',
 };
