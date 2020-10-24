@@ -5,7 +5,7 @@ import { tap } from 'rxjs/operators';
 
 import { RequestsService } from '@core/http/requests.service';
 import { GetGamesListAction, GetSingleGameAction } from './games.actions';
-import { Game } from '@shared/interfaces/games.interfaces';
+import { Game } from '@shared/interfaces/games.interface';
 
 export interface GamesStateModel {
   selectedGame: Game;
