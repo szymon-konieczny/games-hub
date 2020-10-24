@@ -1,3 +1,12 @@
+import { CreationDate, Links, Thumbnails } from './global.interface';
+
+interface Meta {
+  description_short: string;
+  currency: string;
+  bonus: boolean;
+  free_spins: boolean;
+}
+
 export interface Game {
   id: string;
   slug: string;
@@ -8,9 +17,7 @@ export interface Game {
   name: string;
   width: number;
   thumbnail: string;
-  created_at: {
-    date: Date
-  };
+  created_at: CreationDate;
   screenshot: string;
   homepage_image: string;
   vendor: string;
@@ -18,12 +25,7 @@ export interface Game {
   sub_vendor: string;
   sub_vendor_name: string;
   vendor_properties: string;
-  meta: {
-    description_short: string;
-    currency: string;
-    bonus: boolean;
-    free_spins: boolean;
-  };
+  meta: Partial<Meta>;
   enabled: false;
   label: string;
   cols: number;
@@ -34,17 +36,11 @@ export interface Game {
   rating: number;
   backgrounds: string[];
   screenshots: string[];
-  thumbnails: {
-    legacy: string;
-  };
+  thumbnails: Thumbnails;
   jurisdiction: string;
   login_required: false;
   currency: string;
   min_bet: number;
   max_bet: number;
-  _links: {
-    self: {
-      href: string;
-    }
-  };
+  _links: Links;
 }

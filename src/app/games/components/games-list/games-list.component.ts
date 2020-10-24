@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 
 import { GamesState, GamesStateModel } from '@store/games/games.state';
 import { GetGamesListAction, GetSingleGameAction } from '@store/games/games.actions';
-import { Game } from '@shared/interfaces';
 
 @Component({
   selector: 'app-games-list',
@@ -15,7 +14,7 @@ import { Game } from '@shared/interfaces';
 export class GamesListComponent implements OnInit {
   @Select(GamesState.getState) public gamesState$: Observable<GamesStateModel>;
 
-  constructor(private store: Store) { }
+  constructor(private readonly store: Store) { }
 
   public ngOnInit(): void {
     this.store.dispatch(new GetGamesListAction());

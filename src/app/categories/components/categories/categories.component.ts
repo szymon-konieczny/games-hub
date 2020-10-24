@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Store } from '@ngxs/store';
 
-import { GetSingleGameAction } from '@store/games/games.actions';
+import { GetCategoriesListAction } from '@store/categories/categories.actions';
 
 @Component({
   selector: 'app-categories',
@@ -11,8 +11,10 @@ import { GetSingleGameAction } from '@store/games/games.actions';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor(private store: Store) { }
+  constructor(private readonly store: Store) { }
 
-  ngOnInit(): void { }
+  public ngOnInit(): void {
+    this.store.dispatch(new GetCategoriesListAction());
+  }
 
 }

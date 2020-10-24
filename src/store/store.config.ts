@@ -4,8 +4,9 @@ import { NgxsLoggerPluginOptions } from '@ngxs/logger-plugin/src/symbols';
 
 import { AppConfig } from '@env/environment';
 import { GamesState } from './games/games.state';
+import { CategoriesState } from './categories/categories.state';
 
-export const STATES_MODULES = [GamesState];
+export const STATES_MODULES = [GamesState, CategoriesState];
 
 export const OPTIONS_CONFIG: Partial<NgxsConfig> = {
   /**
