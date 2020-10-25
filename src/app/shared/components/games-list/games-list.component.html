@@ -6,11 +6,10 @@
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
-
+  <span *ngIf="(getGamesListIsExecuting$ | async)" class="loading-message">
+    Loading...
+  </span>
   <div class="list-container">
-    <span *ngIf="(getGamesListIsExecuting$ | async)" class="loading-message">
-      Loading...
-    </span>
     <app-game *ngFor="let game of filterGames(gamesList, searchText.value)" [gameData]="game"></app-game>
   </div>
 </div>
