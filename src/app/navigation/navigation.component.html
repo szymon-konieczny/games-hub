@@ -1,2 +1,11 @@
-<button routerLink="/games">Games</button>
-<button routerLink="/categories">Categories</button>
+<nav class="navigation">
+  <ul class="navigation__links">
+    <li class="navigation__links-item">
+      <a class="navigation__links-link" [routerLink]="['/games']">Games</a>
+    </li>
+    <li class="navigation__links-item">
+      <a class="navigation__links-link" [routerLink]="['/categories']">Categories</a>
+    </li>
+  </ul>
+</nav>
+

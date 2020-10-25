@@ -1,0 +1,50 @@
+.navigation {
+  height: 34px;
+  background: green;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+
+  &__links {
+    list-style: none;
+    list-style-position: inside;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+
+    &-item {
+      padding: 8px 8px;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+
+      &:first-child:hover {
+        border-top-left-radius: 17px;
+      }
+
+      &:last-child:hover {
+        border-top-right-radius: 17px;
+      }
+    }
+
+    &-link {
+      height: 100%;
+      text-decoration: none;
+      color: white;
+      transition: .3s;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+}

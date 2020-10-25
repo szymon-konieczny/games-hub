@@ -4,14 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { defaultRequestConfig } from '@shared/constants/defaults';
-import { Game } from '@shared/interfaces/games.interface';
-import { ListPayload } from '@shared/interfaces/requests.interfaces';
+import { ListPayload, Game, Category } from '@interfaces';
 import { HttpService } from './http.service';
-import { Category } from '@shared/interfaces';
-
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RequestsService {
   constructor(
