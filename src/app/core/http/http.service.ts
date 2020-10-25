@@ -5,7 +5,7 @@ import { AppConfig } from '@env/environment';
 import { RequestConfig } from '@shared/interfaces/requests.interfaces';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HttpService {
   public httpOptions = {

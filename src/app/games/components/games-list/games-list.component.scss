@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.form__field {
+  width: 200px;
+}
+
+.spinner {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  z-index: 9999;
+}

@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { GamesRoutingModule } from './games-routing.module';
 import { GamesListComponent } from './components/games-list/games-list.component';
+import { GameComponent } from './components/game/game.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
-  declarations: [GamesListComponent],
+  declarations: [GamesListComponent, GameComponent],
   imports: [
-    CommonModule,
-    GamesRoutingModule
+    SharedModule,
+    GamesRoutingModule,
   ]
 })
 export class GamesModule { }

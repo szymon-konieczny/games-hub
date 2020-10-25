@@ -1,4 +1,8 @@
 import { NgModule } from '@angular/core';
 
-@NgModule({})
+import { HttpModule } from './http/http.module';
+
+@NgModule({
+  exports: [HttpModule],
+})
 export class CoreModule { }

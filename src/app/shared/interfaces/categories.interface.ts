@@ -1,5 +1,5 @@
 import { Game } from './games.interface';
-import { CreationDate, Links, Meta, Thumbnails } from './global.interface';
+import { Links } from './global.interface';
 
 export interface CategoriesResponse {
   _links: Links;
