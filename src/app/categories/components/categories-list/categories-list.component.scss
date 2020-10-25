@@ -1,4 +1,4 @@
-.navigation {
+.categories-nav{
   height: 34px;
   background: green;
   font-family: 'Oxygen', sans-serif;
@@ -6,8 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 17px;
-  border-top-right-radius: 17px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
 
   &__links {
     list-style: none;
@@ -20,12 +20,8 @@
     transition: .5s;
 
     &-item {
-      height: 100%;
-      text-decoration: none;
-      color: white;
-
       &:hover {
-        color: rgb(93, 243, 93);
+        color: black;
       }
 
       &:first-child:hover {
@@ -41,16 +37,23 @@
       padding: 8px 8px;
       height: 100%;
       width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
       text-decoration: none;
       color: white;
+      background: transparent;
+      border: none;
+      transition: .3s;
+      outline: none;
+      cursor: pointer;
 
       &:hover {
-        color: inherit;
-      }
-
-      &.active-link {
         color: rgb(93, 243, 93);
       }
     }
   }
+}
+
+.is-active {
+  color: rgb(93, 243, 93);
 }

@@ -31,6 +31,16 @@ export class CategoriesState {
     return state;
   }
 
+  @Selector()
+  public static getCategoriesState(state: CategoriesStateModel) {
+    return state.categories;
+  }
+
+  @Selector()
+  public static getSelectedCategoryState(state: CategoriesStateModel) {
+    return state.selectedCategory;
+  }
+
   @Action(GetCategoriesListAction)
   public getCategoriesList(ctx: StateContext<CategoriesStateModel>) {
     return this.requestsService.getCategoriesList().pipe(tap(({ _embedded, total_items }) => {
@@ -41,7 +51,9 @@ export class CategoriesState {
   }
 
   @Action(GetSingleCategoryAction)
-  public getSingleGame(ctx: StateContext<CategoriesStateModel>, { slug }: GetSingleCategoryAction) {
-    return this.requestsService.getSingleCategory(slug).pipe(tap(selectedCategory => ctx.patchState({ selectedCategory })));
+  public getSingleCategory(ctx: StateContext<CategoriesStateModel>, { slug }: GetSingleCategoryAction) {
+    const categories = CategoriesState.getCategoriesState(ctx.getState());
+    const selectedCategory = categories.find((category => category.slug === slug));
+    ctx.patchState({ selectedCategory });
   }
 }
