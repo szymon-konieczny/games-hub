@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   &-container {
     display: flex;
@@ -14,11 +15,4 @@
 
 .form__field {
   width: 200px;
-}
-
-.spinner {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-  z-index: 9999;
 }

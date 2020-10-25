@@ -1,1 +1,7 @@
-<p>categories works!</p>
+<div class="categories">
+  <app-categories-list [categoriesList]="categories$ | async" [selectedCategorySlug]="selectedCategorySlug"></app-categories-list>
+  <app-games-list [gamesList]="games$ | async"></app-games-list>
+  <span *ngIf="getCategoriesListActionIsExecuting$ | async" class="loading-message">
+    Loading...
+  </span>
+</div>

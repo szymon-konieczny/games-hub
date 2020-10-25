@@ -4,9 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgxsStoreModule } from '@store/store.module';
+import { NgxsActionsExecutingModule } from '@ngxs-labs/actions-executing';
 
 import { AppRoutingModule } from './app-routing.module';
-import { MaterialModule } from '@material/material.module';
 import { CoreModule } from '@core/core.module';
 import { SharedModule } from '@shared/shared.module';
 import { AppComponent } from './app.component';
@@ -25,12 +25,13 @@ import { MainComponent } from './main/main.component';
   ],
   imports: [
     NgxsStoreModule,
+    NgxsActionsExecutingModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
     CoreModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

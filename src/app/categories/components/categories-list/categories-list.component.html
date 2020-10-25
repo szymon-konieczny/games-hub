@@ -1,0 +1,7 @@
+<nav class="categories-nav">
+  <ul class="categories-nav__links">
+    <li class="categories-nav__links-item" *ngFor="let category of categoriesList">
+      <button class="categories-nav__links-link" [ngClass]="{'is-active': isActive(category)}" (click)="selectCategory(category?.slug)">{{ category?.name }}</button>
+    </li>
+  </ul>
+</nav>

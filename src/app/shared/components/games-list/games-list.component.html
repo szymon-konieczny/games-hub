@@ -7,7 +7,10 @@
     </button>
   </mat-form-field>
 
-  <div *ngIf="games$ | async as games" class="list-container">
-    <app-game *ngFor="let game of filterGames(games, searchText.value)" [gameData]="game"></app-game>
+  <div class="list-container">
+    <span *ngIf="(getGamesListIsExecuting$ | async)" class="loading-message">
+      Loading...
+    </span>
+    <app-game *ngFor="let game of filterGames(gamesList, searchText.value)" [gameData]="game"></app-game>
   </div>
 </div>

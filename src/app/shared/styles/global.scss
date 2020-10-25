@@ -1,2 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 @import './material.scss';
+
+body {
+  background: rgb(214, 254, 255);
+}
+
+.loading-message {
+  margin: 30px;
+  font-size: 1.5rem;
+}
